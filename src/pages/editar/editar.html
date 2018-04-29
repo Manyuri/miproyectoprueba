@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Editar
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <form (ngSubmit)="nuevo(nuevoForm)" #nuevoForm="ngForm">
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nombre</ion-label>
+            <ion-input placeholder="Nombre" [(ngModel)]="nuevoForm.nombre" required></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label floating>Apellido</ion-label>
+            <ion-input placeholder="Apellido" [(ngModel)]="nuevoForm.apellido"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label floating>Empresa</ion-label>
+            <ion-input placeholder="Empresa" [(ngModel)]="nuevoForm.empresa"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label floating>Telefono</ion-label>
+            <ion-input placeholder="Telefono" [(ngModel)]="nuevoForm.telefono" required></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label floating>Correo</ion-label>
+            <ion-input placeholder="Correo" [(ngModel)]="nuevoForm.correo"></ion-input>
+          </ion-item>
+    
+        </ion-list>
+        <div padding>
+          <button ion-button color="primary" (click)="onGuardar()">
+            Guardar</button>
+        </div>
+        <div padding>
+            <button ion-button color="primary" (click)="onCancelar()">
+              Cancelar</button>
+          </div>
+      </form>
+    </ion-content>

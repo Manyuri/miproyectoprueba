@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+       Lista de contactos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<!--
+<md-card>
+  <md-select placeholder="nombre" (change)="onSelect($event)">
+    <md-option *ngFor="let nombre of nombres" [value]="nombre">
+      {{nombre}}
+    </md-option>
+  </md-select>
+</md-card>-->
+
+<ion-content>
+  <ion-list>
+     <ion-item *ngFor="let ContactoItem of contactos">
+       <h2>{{contactoItem.nombre}} {{contactoItem.apellido}}</h2>
+       <p>{{contactoItem.telefono}}</p>
+       <button ion-button clear item-end (click)="borrar(contactoItem); $event.stopPropagation()">Borrar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
